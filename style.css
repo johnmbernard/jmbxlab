@@ -101,3 +101,74 @@ form button:hover {
 .button:hover {
     background-color: #0056b3;
 }
+
+.hero {
+    background: linear-gradient(to right, #007BFF, #00C6FF);
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Dynamic Section Styles */
+.dynamic-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.dynamic-card {
+    width: 30%;
+    height: 200px;
+    background: linear-gradient(to bottom right, #007BFF, #00C6FF);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.dynamic-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dynamic-card h3 {
+    z-index: 1;
+}
+
+.dynamic-card .buttons {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: bottom 0.3s ease;
+}
+
+.dynamic-card:hover .buttons {
+    bottom: 20px;
+}
+
+.dynamic-card .btn {
+    background: white;
+    color: #007BFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dynamic-card .btn:hover {
+    background: #007BFF;
+    color: white;
+}

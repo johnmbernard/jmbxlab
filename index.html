@@ -3,71 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - jmbxlab</title>
+    <title>Welcome - jmbxlab</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Welcome to my Experiment Lab!</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="experience.html">My Experience</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
+        <h1 class="text-center my-4">Welcome to JMBXLab</h1>
     </header>
-    <main>
-        <p>Welcome to my personal site! I'm building this site to be an advertisement for me, showcase my work,
-            and in the future, be a collaborative space for developers and engineers to share news and ideas.
-            I'm looking forward to working with you all and hopefully this site will be a great resource for
-            new developers and engineers like me!
-        </p>
-        <h2>About JMBXLab</h2>
-        <p>
-            I have always been hands on and believe strongly that the best leaders (especially in software) 
-            should be able to dive deep and understand the work that their teams are doing. This 
-            website is a way for me to share my skills, learn new things, and share my journey. Eventually, I will start to showcase some of my other talents with some Open Source code and 
-            projects, and I hope to build a collaborative space for developers. Please feel free to send me feedback, 
-            comments, or berate me for my poor web development skills! I am not much 
-            of a web developer (or designer), but I'm looking forward to learning and taking you on this journey 
-            with me.
-        </p>
-        <h2>About Me</h2>
-        <p>
-            My name is John Bernard and I am a software leader with over a decade of experience leading
-            teams and organizations to success. My journey to get here has been a backwards one, starting
-            out in the Army teaching Soldiers hand to hand combat, leading Intelligence teams, and mentoring
-            junior Leaders. During this time, I got to work with some amazing software teams that developed
-            our Intelligence systems and instilled a passion for Agile software development and innovation.
-        
-        <p>
-            Upon leaving the Army, I worked in a number of industries leading teams and organizations to
-            success, from Real Estate to Construction to building Networks for COCOMs. I often found myself
-            leading Agile change in organizations that were typically waterfall and re-working processes to
-            be more innovative and efficient, including in the initial bidding and contracting phases of projects.
-            In the last five years, I have been diving fully into the software world, building full stack
-            applications, platforms, and solutions for the DoD. It has been a huge learning curve, but I have 
-            enjoyed every minute of it. Most recently, I'm learning all about Observability, SRE, and advanced
-            Kubernetes and Cloud solutions. 
-        </p>
-        <h2>Where might you work with me?</h2>
-        <p>
-            I prefer a challenging role (which might explain my diverse experience and roles) in organizations 
-            that value innovation, invest in their people, and aren't afraid of change. I prefer to make an impact, 
-            whether that's overseeing operations, strategic planning and generating business, or getting involved 
-            in the nitty gritty of software development. If you're looking to hire me; 
-            I'm open to roles in executive positions, such as a 
-            director, VP, Architect, or CTO, but am open to other challenges as well.
-        </p>
-        <p>
-            I also enjoy short term wins and you can always pitch something that you need some temporary help with 
-            and I'd be happy to help as a consultant or contractor! I look forward to working with you!
-        </p>
+    <main class="container">
+        <!-- First Section -->
+        <div class="dynamic-section">
+            <div class="dynamic-card">
+                <h3>About Me</h3>
+                <div class="buttons">
+                    <a href="aboutme.html" class="btn">Learn More</a>
+                    <a href="contact.html" class="btn">Contact</a>
+                </div>
+            </div>
+            <div class="dynamic-card">
+                <h3>Experience</h3>
+                <div class="buttons">
+                    <a href="experience.html" class="btn">View Experience</a>
+                </div>
+            </div>
+            <div class="dynamic-card">
+                <h3>Contact</h3>
+                <div class="buttons">
+                    <a href="contact.html" class="btn">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Section -->
+        <div class="dynamic-section">
+            <div class="dynamic-card">
+                <h3>Projects</h3>
+                <div class="buttons">
+                    <a href="projects.html" class="btn">View Projects</a>
+                </div>
+            </div>
+            <div class="dynamic-card">
+                <h3>News</h3>
+                <div class="buttons">
+                    <a href="news.html" class="btn">Read News</a>
+                </div>
+            </div>
+            <div class="dynamic-card">
+                <h3>Collaboration</h3>
+                <div class="buttons">
+                    <a href="collaboration.html" class="btn">Collaborate</a>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
+    <footer class="text-center mt-5">
         <p>&copy; 2025 John M. Bernard</p>
     </footer>
 </body>
