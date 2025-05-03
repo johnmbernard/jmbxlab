@@ -154,7 +154,8 @@ form button:hover {
 }
 
 .dynamic-card .buttons {
-    position: absolute;
+    position: relative;
+    overflow: visible;
     display: flex;
     flex-direction: column; /* Stack buttons vertically */
     gap: 10px;
@@ -169,8 +170,7 @@ form button:hover {
 
 .dynamic-card .btn {
     background: white;
-    color: #007BFF;
-    border: none;
+    color: #007BFF;;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
