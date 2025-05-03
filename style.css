@@ -1,15 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure consistent box model */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body and html take up the full viewport height */
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     background-color: #f4f4f4;
     color: #333;
 
     /* Set up flexbox for the page layout */
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    height: 100vh; /* Ensure the body takes up the full viewport height */
 }
 
 header {
@@ -39,13 +51,11 @@ nav ul li a {
 }
 
 main {
-    padding: 2rem;
-    background: #fff;
-    margin: 2rem auto;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    flex: 1; /* Make the main content area flexible */
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    flex-grow: 1;
 }
 
 footer {
@@ -54,6 +64,7 @@ footer {
     background-color: #333;
     color: #fff;
     width: 100%; /* Ensure the footer spans the full width */
+    margin: 0;
 }
 
 form label {
@@ -110,51 +121,50 @@ form button:hover {
 }
 
 /* Dynamic Section Styles */
-.dynamic-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 50px 0;
-}
+
 
 .dynamic-card {
-    width: 30%;
-    height: 200px;
+    flex: 1; /* Each card takes up equal space by default */
+    height: 100%; /* Full height of the container */
     background: linear-gradient(to bottom right, #007BFF, #00C6FF);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    transition: flex 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
     cursor: pointer;
 }
 
 .dynamic-card:hover {
-    transform: scale(1.1);
+    flex: 3; /* Grow to 75% of the container */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .dynamic-card h3 {
     z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.dynamic-card:hover h3 {
+    opacity: 0; /* Hide the title */
 }
 
 .dynamic-card .buttons {
     position: absolute;
-    bottom: -100px;
-    left: 0;
-    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack buttons vertically */
     gap: 10px;
-    transition: bottom 0.3s ease;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .dynamic-card:hover .buttons {
-    bottom: 20px;
+    opacity: 1; /* Show buttons */
+    transform: translateY(0); /* Slide into view */
 }
 
 .dynamic-card .btn {
