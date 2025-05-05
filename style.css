@@ -50,7 +50,7 @@ nav ul li a {
     text-decoration: none;
 }
 
-main {
+main, section {
     display: flex;
     margin: 0;
     padding: 0;
@@ -214,6 +214,7 @@ form button:hover {
     cursor: pointer;
     overflow: hidden;
     transition: all 0.5s ease; /* Smooth transition for size and shape */
+    border: 1px, solid, red;
 }
 
 .dynamic-bubble h3 {
@@ -232,12 +233,16 @@ form button:hover {
 }
 
 .dynamic-bubble.expanded {
+    position: fixed; /* Detach from the document flow and fill the viewport */
+    top: 0;
+    left: 0;
     width: 100vw; /* Full screen width */
     height: 100vh; /* Full screen height */
     border-radius: 0; /* Remove the circle shape */
     justify-content: flex-start; /* Align content to the top */
     align-items: flex-start;
     padding: 50px;
+    z-index: 1000; /* Ensure it appears above all other elements */
 }
 
 .dynamic-bubble.expanded h3 {
