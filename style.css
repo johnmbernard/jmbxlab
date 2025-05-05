@@ -219,6 +219,7 @@ form button:hover {
 .dynamic-bubble h3 {
     z-index: 1;
     transition: opacity 0.3s ease; /* Smooth fade for the title */
+    transition-delay: 0.75s;
 }
 
 .dynamic-bubble .text-content {
@@ -241,9 +242,11 @@ form button:hover {
 
 .dynamic-bubble.expanded h3 {
     opacity: 0; /* Hide the title when expanded */
+    transition-delay: 0s;
 }
 
 .dynamic-bubble.expanded .text-content {
     opacity: 1; /* Show the text content */
     transform: scale(1); /* Reset scale */
+    transition-delay: 0.75s;
 }
