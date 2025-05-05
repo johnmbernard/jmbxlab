@@ -185,3 +185,65 @@ form button:hover {
     background: #007BFF;
     color: white;
 }
+
+.dynamic-card .text-content {
+    margin: 0; /* Remove extra margins */
+    text-align: center; /* Center text inside the container */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.75s ease, transform 0.3s ease;
+    transition-delay: 0s; /* No delay by default */
+}
+
+.dynamic-card:hover .text-content {
+    opacity: 1; /* Show text content */
+    transform: translateY(0); /* Slide into view */
+    transition-delay: 0.75s; /* Add delay for fade-in */
+}
+
+.dynamic-bubble {
+    width: 150px; /* Initial size of the bubble */
+    height: 150px;
+    background: linear-gradient(to bottom right, #007BFF, #00C6FF);
+    color: white;
+    border-radius: 50%; /* Makes it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s ease; /* Smooth transition for size and shape */
+}
+
+.dynamic-bubble h3 {
+    z-index: 1;
+    transition: opacity 0.3s ease; /* Smooth fade for the title */
+}
+
+.dynamic-bubble .text-content {
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.9); /* Slightly shrink the text */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade and scale */
+    position: absolute;
+    padding: 20px;
+    text-align: center;
+}
+
+.dynamic-bubble.expanded {
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
+    border-radius: 0; /* Remove the circle shape */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start;
+    padding: 50px;
+}
+
+.dynamic-bubble.expanded h3 {
+    opacity: 0; /* Hide the title when expanded */
+}
+
+.dynamic-bubble.expanded .text-content {
+    opacity: 1; /* Show the text content */
+    transform: scale(1); /* Reset scale */
+}
