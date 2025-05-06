@@ -15,14 +15,14 @@ body {
     line-height: 1.6;
     margin: 0 !important;
     padding: 0 !important;
-    background-color: rgba(0, 0, 0, 0.4); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0); /* Fallback color */
     color: #333;
 
     /* Set up flexbox for the page layout */
     display: flex;
     flex-direction: column;
     height: 100vh; /* Ensure the body takes up the full viewport height */
-    background-image: url('public/landing_background.gif'); /* Replace with your .gif file path */
+    background-image: url('public/metal_flow.gif'); /* Replace with your .gif file path */
     background-size: cover; /* Make the background cover the entire viewport */
     background-repeat: no-repeat; /* Prevent tiling */
     background-position: center; /* Center the background */
@@ -30,7 +30,7 @@ body {
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0);
     color: #fff;
     padding: 1rem 0;
     text-align: center;
@@ -70,7 +70,7 @@ main {
 footer {
     text-align: center;
     padding: 1rem 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0);
     color: #fff;
     width: 100%; /* Ensure the footer spans the full width */
     margin: 0;
@@ -123,7 +123,7 @@ form button:hover {
 }
 
 .hero {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     padding: 50px;
     text-align: center;
@@ -135,7 +135,7 @@ form button:hover {
 .dynamic-card {
     flex: 1; /* Each card takes up equal space by default */
     height: 100%; /* Full height of the container */
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     display: flex;
     justify-content: center;
@@ -213,7 +213,7 @@ form button:hover {
 .dynamic-bubble {
     width: 150px; /* Initial size of the bubble */
     height: 150px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     color: white;
     border-radius: 50%; /* Makes it a circle */
     display: flex;
@@ -268,7 +268,7 @@ form button:hover {
     align-items: flex-start;
     padding: 50px;
     z-index: 1000; /* Ensure it appears above all other elements */
-    background-image: url('public/landing_background.gif'); /* Replace with your .gif file path */
+    background-color: rgba(0, 0, 0, 0)
 }
 
 .dynamic-bubble.expanded h3 {
