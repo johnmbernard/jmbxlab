@@ -283,6 +283,12 @@ form button:hover {
 }
 
 /* Modal container */
+.modal, .modal-content {
+    all: unset; /* Reset all inherited and default styles */
+    display: flex;
+    flex-direction: column;
+}
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -296,9 +302,8 @@ form button:hover {
     align-items: center;
 }
 
-/* Modal content */
 .modal-content {
-    background: white;
+    background-color: white; /* Solid white background for the content */
     padding: 20px;
     border-radius: 10px;
     width: 90%;

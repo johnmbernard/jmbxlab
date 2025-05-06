@@ -10,3 +10,9 @@ function toggleContactForm() {
         modal.style.display = 'flex';
     }
 }
+
+function showSuccessMessage(event) {
+    event.preventDefault(); // Prevent the default form submission
+    alert('Thank you! I will get back to you soon! :)');
+    toggleContactForm(); // Close the modal
+}
