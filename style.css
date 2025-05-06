@@ -1,4 +1,5 @@
 * {
+    font-family: 'Calibri', serif; /* Use a common font for all elements */
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Ensure consistent box model */
@@ -268,7 +269,7 @@ form button:hover {
     align-items: flex-start;
     padding: 50px;
     z-index: 1000; /* Ensure it appears above all other elements */
-    background-color: rgba(0, 0, 0, 0)
+    background-color: rgba(0, 0, 0, 0.9)
 }
 
 .dynamic-bubble.expanded h3 {
