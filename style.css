@@ -64,6 +64,7 @@ main {
     padding: 0;
     overflow: hidden;
     flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0)
 }
 
 footer {
@@ -122,7 +123,7 @@ form button:hover {
 }
 
 .hero {
-    background: linear-gradient(to right, #007BFF, #00C6FF);
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
     padding: 50px;
     text-align: center;
@@ -212,7 +213,7 @@ form button:hover {
 .dynamic-bubble {
     width: 150px; /* Initial size of the bubble */
     height: 150px;
-    background: linear-gradient(to bottom right, #007BFF, #00C6FF);
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
     border-radius: 50%; /* Makes it a circle */
     display: flex;
@@ -222,7 +223,23 @@ form button:hover {
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    transition: all 0.5s ease; /* Smooth transition for size and shape */
+    transition: all 0.1s ease; /* Smooth transition for size and shape */
+}
+
+.dynamic-bubble:hover {
+    width: 300px; /* Initial size of the bubble */
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 50%; /* Makes it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.1s ease; /* Smooth transition for size and shape */
 }
 
 .dynamic-bubble h3 {
@@ -251,6 +268,7 @@ form button:hover {
     align-items: flex-start;
     padding: 50px;
     z-index: 1000; /* Ensure it appears above all other elements */
+    background-image: url('public/landing_background.gif'); /* Replace with your .gif file path */
 }
 
 .dynamic-bubble.expanded h3 {
