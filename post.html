@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Updates - JMBXLab</title>
+    <link rel="stylesheet" href="css/post.css">
+</head>
+<body>
+    <header>
+        <h1 class="text-center my-4">Post Updates</h1>
+    </header>
+    <main>
+        <section class="post-form">
+            <h2>Create a Post</h2>
+            <form id="post-form">
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image (optional):</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="link">Link (optional):</label>
+                    <input type="url" id="link" name="link" placeholder="https://example.com">
+                </div>
+                <button type="button" class="btn" onclick="createPost()">Post</button>
+            </form>
+        </section>
+        <section class="feed">
+            <h2>Feed</h2>
+            <div id="feed-container">
+                <!-- Posts will appear here -->
+            </div>
+        </section>
+    </main>
+    <footer class="text-center">
+        <p>&copy; 2025 John M. Bernard</p>
+    </footer>
+    <script>
+        function createPost() {
+            const message = document.getElementById('message').value;
+            const imageInput = document.getElementById('image');
+            const link = document.getElementById('link').value;
+
+            if (!message) {
+                alert('Message is required!');
+                return;
+            }
+
+            const feedContainer = document.getElementById('feed-container');
+
+            // Create a new post element
+            const post = document.createElement('div');
+            post.classList.add('post');
+
+            // Add message
+            const messageElement = document.createElement('p');
+            messageElement.textContent = message;
+            post.appendChild(messageElement);
+
+            // Add image if provided
+            if (imageInput.files && imageInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.alt = 'Post Image';
+                    img.style.maxWidth = '100%';
+                    post.appendChild(img);
+                };
+                reader.readAsDataURL(imageInput.files[0]);
+            }
+
+            // Add link if provided
+            if (link) {
+                const linkElement = document.createElement('a');
+                linkElement.href = link;
+                linkElement.textContent = link;
+                linkElement.target = '_blank';
+                post.appendChild(linkElement);
+            }
+
+            // Add the post to the feed
+            feedContainer.prepend(post);
+
+            // Clear the form
+            document.getElementById('post-form').reset();
+        }
+    </script>
+</body>
+</html>

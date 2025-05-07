@@ -23,7 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh; /* Ensure the body takes up the full viewport height */
-    background-image: url('public/calm_tech.gif'); /* Replace with your .gif file path */
+    background-image: url('../public/calm_tech.gif'); /* Replace with your .gif file path */
     background-size: cover; /* Make the background cover the entire viewport */
     background-repeat: no-repeat; /* Prevent tiling */
     background-position: center; /* Center the background */
