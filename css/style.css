@@ -353,3 +353,19 @@ form button:hover {
 .modal-content form button:hover {
     background-color: #0056b3;
 }
+
+.footer-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-images img {
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.footer-images img:hover {
+    transform: scale(1.5);
+}
